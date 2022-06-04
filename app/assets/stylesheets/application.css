@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*header, h1, nav, .book-comment {
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+header {
+  width: 90%;
+  padding: 15px 0;
+  margin: 30px auto 0;
+  text-align: center;
+  border-top: solid 5px #000000;
+}
+
+header .headline {
+  font-size: 32px;
+}
+
+nav {
+  width: 880px;
+  margin: 0 auto;
+  border-top: solid 0.7px #000000;
+  border-bottom: solid 0.7px #000000;
+}
+
+.nav-list {
+  text-align: center;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.nav-list-item {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+}
+
+main {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.book-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book-box {
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+}
+
+.book-comment {
+  width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.book-body {
+  color: gray;
+  font-size: 12px;
+}
+
+.book-title {
+  font-size: 18px;
+}
+
+
+
+/*ここからコピペのっける*/
+
+
+
+
+
+.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}
+
+/*css欄に載ってた内容↓上はhtml欄にあった*/
+
+html {
+    display: block;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+body {
+    display: block;
+    margin: 8px;
+}
+
+p, ol, ul, td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px;
+}
+
+
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}

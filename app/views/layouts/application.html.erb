@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+<html>
+  <head>
+    <title>Bookers</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+        <header>
+      <h1 class="headline"> All Books </h1>
+    </header>
+    <nav>
+      <ul class="nav-book">
+        <li class="nav-book-item">
+          <%= link_to "Top", top_path %>
+        </li>
+        <li class="nav-book-item">
+          <%= link_to "Books", books_path %>
+        </li>
+
+      </ul>
+    </nav>
+    <main>
+
+    <%= yield %>
+    </main>
+
+  </body>
+
+
+
+</html>
+-->
