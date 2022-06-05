@@ -1,7 +1,28 @@
-<h1>Books#show</h1>
-<p>Find me in app/views/books/show.html.erb</p>
+<!--<h1>Books#show</h1>
+<p>Find me in app/views/books/show.html.erb</p>-->
 
-<h2>タイトル</h2>
+<body>
+    <p id="notice">Book was successfully created.</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @book.body %>
+</p>
+
+<a class="edit_@book = Book.find(params[:id])" href="/books/@book = Book.find(params[:id])/edit">Edit</a> |
+<a class="back" href="/books">Back</a>
+
+
+
+</body>
+
+
+<!--<h2>タイトル</h2>
 <p><%= @book.title %></p>
 
 <h2>本文</h2>
@@ -9,3 +30,5 @@
 
 <%= link_to "編集", edit_book_path(@book.id) %>
 <%= link_to "削除", destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+
+-->
