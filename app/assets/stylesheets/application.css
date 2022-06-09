@@ -119,3 +119,22 @@ a:visited {
     color: #666;
 }
 
+
+/*editのレイアウト*/
+
+div{
+    display: block
+}
+
+div.field div.actions{
+    margin-bottom: 10px;
+}
+
+div.actions{
+    padding:1px 6px;
+}
+
+/*indexのレイアウト*/
+h4{
+    float: left;
+}

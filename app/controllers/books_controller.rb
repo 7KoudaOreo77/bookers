@@ -11,10 +11,20 @@ class BooksController < ApplicationController
     else
       render :new
     end
+
+    if @new_book.save
+      flash[:notice] = "Book was successfully created."
+      redirect_to book_path(@new_book)
+    else
+      flash[:alret] = "投稿に失敗しました。"
+      @books = Book.all
+      render "index"
+    end
   end
 
   def index
     @books = Book.all
+    @book=Book.new
   end
 
   def show

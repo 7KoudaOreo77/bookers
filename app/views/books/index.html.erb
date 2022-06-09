@@ -1,16 +1,30 @@
 <h1>Books</h1>
-<h4>Title</h4>
-<h4>body</h4>
-<% @books.each do |book| %>
+<table>
+ <h4>Title</h4>
+ <h4>body</h4>
+ <br>
+ <% @books.each do |book| %>
 
-　<%= book.title%>
+ 　<%= book.title%>
 
-　<%= book.body%>
+ 　<%= book.body%>
 
-　<%=link_to "Show",book_path(book.id) %>
-  <%=link_to "Edit",edit_book_path(book.id) %>
-　<%=link_to "Destroy",destroy_book_path(book.id),method: :delete, "data-confirm" => "本当に削除しますか？"%>
-　<br>
+ 　<%=link_to "Show",book_path(book.id) %>
+   <%=link_to "Edit",edit_book_path(book.id) %>
+　 <%=link_to "Destroy",destroy_book_path(book.id),method: :delete, "data-confirm" => "Are you sure?"%>
+  <br>
 
-
+ <% end %>
+</table>
+<h2>New Book</h2>
+<div class="field">
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+  <%= f.label :Title %>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :Body %>
+  <%= f.text_area :body %>
+</div>
+  <%= f.submit 'Create Book' %>
 <% end %>
