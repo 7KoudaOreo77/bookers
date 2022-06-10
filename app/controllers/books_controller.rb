@@ -18,6 +18,7 @@ class BooksController < ApplicationController
       redirect_to book_path(@book.id)
    else
       flash.now[:danger] = 'ユーザー登録に失敗しました'
+      @books=Book.all
       render :new
    end
 
