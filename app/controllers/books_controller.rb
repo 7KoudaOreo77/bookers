@@ -7,19 +7,20 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     if @book.save
-      redirect_to book_path(@book.id)
+      redirect_to book_path(@book.id)and return
     else
-      render :new
+      render :index
+
     end
 
-    if @new_book.save
-      flash[:notice] = "Book was successfully created."
-      redirect_to book_path(@new_book)
-    else
-      flash[:alret] = "投稿に失敗しました。"
-      @books = Book.all
-      render "index"
-    end
+   if @book.save
+      flash[:success] = 'Book was successfully created.'
+      redirect_to book_path(@book.id)
+   else
+      flash.now[:danger] = 'ユーザー登録に失敗しました'
+      render :new
+   end
+
   end
 
   def index
@@ -40,12 +41,28 @@ class BooksController < ApplicationController
     book.update(book_params)
     redirect_to book_path(book.id)
 
+    if @book.save
+      redirect_to book_path(@book.id)
+    else
+      render :index
+
+    end
+
+
+    if @book.save
+      flash[:success] = 'Book was successfully updated.'
+      redirect_to book_path(@book.id)
+    else
+      flash.now[:danger] = 'ユーザー登録に失敗しました'
+      render :new
+    end
+
   end
 
   def destroy
-    book = Book.find(params[:id])  # データ（レコード）を1件取得
-    book.destroy  # データ（レコード）を削除
-    redirect_to '/books'  # 投稿一覧画面へリダイレクト
+    book = Book.find(params[:id])
+    book.destroy
+    redirect_to '/books'
   end
 
   private
