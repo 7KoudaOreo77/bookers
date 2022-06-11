@@ -18,7 +18,17 @@
 
  </tr>
 </table>
+
+
 <h2>New Book</h2>
+<% if @book.errors.any? %>
+  <%= @book.errors.count %>件のエラーが発生しました
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 <div class="field">
 <%= form_with model: @book, url: '/books', method: :post do |f| %>
   <%= f.label :Title %>
